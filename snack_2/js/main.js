@@ -6,47 +6,47 @@
 
 const teams = [
     {
-        nome : 'Inter',
-        punti : 0,
-        falli : 0
+        nome: 'Inter',
+        punti: 0,
+        falli: 0
     },
     {
-        nome : 'Juventus',
-        punti : 0,
-        falli : 0
+        nome: 'Juventus',
+        punti: 0,
+        falli: 0
     },
     {
-        nome : 'Napoli',
-        punti : 0,
-        falli : 0
+        nome: 'Napoli',
+        punti: 0,
+        falli: 0
     },
     {
-        nome : 'Milan',
-        punti : 0,
-        falli : 0
+        nome: 'Milan',
+        punti: 0,
+        falli: 0
     },
     {
-        nome : 'Roma',
-        punti : 0,
-        falli : 0
+        nome: 'Roma',
+        punti: 0,
+        falli: 0
     }
 ];
 
 let arrayNomeFalliSquadre = [];
 
-teams.forEach((team) =>{
+teams.forEach((team) => {
 
     // NUMERI CASUALI PER OGNI SQUADRA:
-    team.punti= Math.floor(Math.random()* 70 + 1);
-    team.falli= Math.floor(Math.random()* 50 + 1);
+    team.punti = Math.floor(Math.random() * 70 + 1);
+    team.falli = Math.floor(Math.random() * 50 + 1);
 
-    console.log(team.punti,'PUNTI');
+    console.log(team);
 
-
-    // DESTRUCTURING
-    const {nome,falli} = team;
-
-    arrayNomeFalliSquadre.push(nome,falli,'FALLI');
+    const risultatoFinale = teams.map((team) => {
+        const { nome, falli } = team;
+        return { nome, falli };
+    });
+    console.log(risultatoFinale, 'totale');
 }
 );
-console.log (arrayNomeFalliSquadre);
+

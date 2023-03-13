@@ -27,6 +27,8 @@ objBici.forEach((element) => {
     let { peso } = element;
     if (peso < biciPiuLeggera) {
         biciPiuLeggera = element;
+    }else{
+        
     }
 }
 );
@@ -39,8 +41,8 @@ let { nome, peso } = biciPiuLeggera;
 
 //TEMPLATE
 document.getElementById('container').innerHTML = `<h1>La bici ${nome} è la bici più leggera con ${peso}!</h1>`;
-                                                    
-                                                 
+
+
 
 
 
